@@ -18,7 +18,7 @@ using OpenQA.Selenium.Edge;
 namespace SecondLesson
 {
     [TestFixture]
-    public class Class1:TestBase
+    public class EmailTests:TestBase
     {
         EmailPage emailPage;
         public override void BaseOneTimeSetUp()
