@@ -55,7 +55,7 @@ namespace Test.Tests
             EmailPage emailPage = new EmailPage(driver);
             emailPage.IncomingMailsTab().Click();
             emailPage.FirstMail().Click();
-            Assert.AreEqual("protskiv26@i.ua", emailPage.Receiver().Text);
+            Assert.AreEqual("test261998@i.ua", emailPage.Receiver().Text);
         }
     }
 }

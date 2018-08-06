@@ -35,7 +35,7 @@ namespace SecondLesson
         public void Check_Mail_After_Login()
         {
             EmailPage emailPage = new EmailPage(driver);
-            emailPage.MailName().Equals("protskiv26@i.ua");
+            emailPage.MailName().Equals("test261998@i.ua");
         }
 
         [Test]
@@ -127,7 +127,7 @@ namespace SecondLesson
             
             Assert.AreEqual("Letter for test", emailPage.Subject().Text);
             Assert.IsTrue(emailPage.Description().Text.Contains("Description Test"));
-            Assert.AreEqual("protskiv26@i.ua", emailPage.Receiver().Text);
+            Assert.AreEqual("test261998@i.ua", emailPage.Receiver().Text);
         }
     }
 }

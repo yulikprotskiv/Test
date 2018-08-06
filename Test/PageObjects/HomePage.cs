@@ -37,7 +37,7 @@ namespace Test.PageObjects
 
             Assert.Multiple(() =>
             {
-                Assert.AreEqual("test@i.ua", LoginInput.GetAttribute("value"));
+                Assert.AreEqual("test261998@i.ua", LoginInput.GetAttribute("value"));
                 Assert.AreEqual("Password1", LoginPasswordInput.GetAttribute("value"));
                 Assert.AreEqual("email.ua", MailDomainDropdown.GetAttribute("value"));
                 Assert.IsTrue(LoginCheckbox.Selected);

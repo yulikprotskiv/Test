@@ -38,10 +38,10 @@ namespace Test.PageObjects
         public void CreateNewLetter()
         {
             CreateLetterBtn().Click();
-            ReceiverField().SendKeys("protskiv26@i.ua");
+            ReceiverField().SendKeys("test261998@i.ua");
             SubjectField().SendKeys("Letter for test");
             DescriptionField().SendKeys("Description Test");
-            //SentMailButton().Click();
+            SentMailButton().Click();
         }
 
         public IWebElement MainPage() => driver.FindElement(By.XPath("//li[@class='ho_menu_item']/a[text()='Головна']"));

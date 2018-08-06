@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,6 @@ namespace Test.Framework
     public class TestBase
     {
         public IWebDriver driver;
-        //string testname = TestContext.CurrentContext.Test.Name;
 
         [OneTimeSetUp]
         public void OneTimeSetUp()
@@ -42,14 +42,15 @@ namespace Test.Framework
             Console.WriteLine(TestContext.CurrentContext.Result.Outcome.Status);
             Console.WriteLine("----------------------------------------------");
 
-            //TearDown();
+            Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+
+            string title = TestContext.CurrentContext.Test.Name;
+            string runname = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
+            string filePath = @"C:\Users\Lenovo Y500\Desktop\TestFiles\";
+
+            ss.SaveAsFile(filePath + runname + ".jpg", ScreenshotImageFormat.Jpeg);
+
         }
-
-        //public virtual void TearDown()
-        //{
-
-        //}
-
         [OneTimeTearDown]
         public void BaseOneTimeTearDown()
         {
