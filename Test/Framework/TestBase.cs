@@ -22,7 +22,7 @@ namespace Test.Framework
         [OneTimeSetUp]
         public void OneTimeSetUp()
         {
-            driver = WebDriverFactory.GetInstance();
+             driver = WebDriverFactory.GetInstance();
             BaseOneTimeSetUp();
         }
         public virtual void BaseOneTimeSetUp()
@@ -33,9 +33,15 @@ namespace Test.Framework
         [SetUp]
         public void BaseSetUp()
         {
+            SetUp();
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine(TestContext.CurrentContext.Test.Name);
         }
+        public virtual void SetUp()
+        {
+
+        }
+
         [TearDown]
         public void BaseTearDown()
         {
@@ -44,13 +50,18 @@ namespace Test.Framework
 
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
 
-            string title = TestContext.CurrentContext.Test.Name;
-            string runname = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
-            string filePath = @"C:\Users\Lenovo Y500\Desktop\TestFiles\";
+            //string title = TestContext.CurrentContext.Test.Name;
+            //string runname = title + DateTime.Now.ToString("yyyy-MM-dd-HH_mm_ss");
+            //string filePath = @"C:\Users\Lenovo Y500\Desktop\TestFiles\";
 
-            ss.SaveAsFile(filePath + runname + ".jpg", ScreenshotImageFormat.Jpeg);
+            //ss.SaveAsFile(filePath + runname + ".jpg", ScreenshotImageFormat.Jpeg);
+            TearDown();
+        }
+        public virtual void TearDown()
+        {
 
         }
+
         [OneTimeTearDown]
         public void BaseOneTimeTearDown()
         {

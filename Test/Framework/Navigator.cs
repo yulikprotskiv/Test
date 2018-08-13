@@ -21,10 +21,10 @@ namespace Test.Framework
     {
         public static EmailPage NavigateToEmailPage(IWebDriver driver)
         {
-          driver.Navigate().GoToUrl("http://www.i.ua/");
-          HomePage homePage = new HomePage(driver);
-          homePage.Login(TestConfigurations.Username, TestConfigurations.Password);
-          return new EmailPage(driver);
+            driver.Navigate().GoToUrl("http://www.i.ua/");
+            HomePage homePage = new HomePage(driver);
+            homePage.Login(TestConfigurations.Username, TestConfigurations.Password);
+            return new EmailPage(driver);
         }
         //public static EmailPage navigatetoemailpage(IWebDriver driver)
         //{
@@ -32,6 +32,8 @@ namespace Test.Framework
         //    homepage.Login(TestConfigurations.Username, TestConfigurations.Password);
         //    return new EmailPage(driver);
         //}
+
+
         public static TranslatePage NavigateToTranslatePage(IWebDriver driver)
         {
             driver.Navigate().GoToUrl("https://perevod.i.ua/");

@@ -24,6 +24,8 @@ namespace SecondLesson
         public override void BaseOneTimeSetUp()
         {
             emailPage = Navigator.NavigateToEmailPage(driver);
+            HomePage hPage = new HomePage(driver);
+            hPage.LoginB();
         }
         [Test]
         public void Ckeck_Title_After_Login()

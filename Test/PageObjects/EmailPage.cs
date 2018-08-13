@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Test.PageObjects
@@ -34,6 +35,16 @@ namespace Test.PageObjects
         public IWebElement SecondLetter() => driver.FindElement(By.XPath("//span[text()='Рекомендації по безпеці Вашого акаунту']"));
         public IWebElement ThirdLetter() => driver.FindElement(By.XPath("//span[text()='Обережно шахраї!']"));
         public IWebElement FourthLetter() => driver.FindElement(By.XPath("//span[text()='Ласкаво просимо на I.UA!']"));
+
+        //Logout
+        public IWebElement SettingsButton => driver.FindElement(By.XPath("//span[@class = 'icon-ho ho_settings ho_i_settings']"));
+        public IWebElement LogOutButton => driver.FindElement(By.XPath("//li[contains(@class, 'ho_popup_menu_item')]//a[text()='Вийти']"));
+        public void Logout()
+        {
+            SettingsButton.Click();
+            Thread.Sleep(2000);
+            LogOutButton.Click();
+        }
 
         public void CreateNewLetter()
         {
