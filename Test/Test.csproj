@@ -68,6 +68,7 @@
     <Compile Include="Tests\EmailTests.cs" />
     <Compile Include="Framework\TestBase.cs" />
     <Compile Include="Tests\NewEmail.cs" />
+    <Compile Include="Tests\MyTest.cs" />
     <Compile Include="Tests\TranslateTests.cs" />
     <Compile Include="Tests\UploadDownload.cs" />
   </ItemGroup>
