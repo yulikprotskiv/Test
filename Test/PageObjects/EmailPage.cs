@@ -16,7 +16,7 @@ namespace Test.PageObjects
                 this.driver = driver;
             }     
         //Email elements
-        public IWebElement MailName() => driver.FindElement(By.XPath("//ul[@class='sn_menu']//span[text()='protskiv26@i.ua']"));
+        public IWebElement MailName() => driver.FindElement(By.XPath("//ul[@class='sn_menu']//span[text()='test261998@i.ua']"));
         public IWebElement CreateLetterBtn() => driver.FindElement(By.XPath("//div[@class='Body']//a[text()= 'Створити листа']"));      
         public IWebElement ReceiverField() => driver.FindElement(By.Id("to"));
         public IWebElement SubjectField() => driver.FindElement(By.Name("subject"));
