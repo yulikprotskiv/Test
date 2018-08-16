@@ -24,6 +24,8 @@ namespace Test.Tests
         public override void BaseOneTimeSetUp()
         {
             emailPage = Navigator.NavigateToEmailPage(driver);
+            HomePage hPage = new HomePage(driver);
+            hPage.LoginB();
         }
 
         [Test]
